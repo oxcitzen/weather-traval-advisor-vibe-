@@ -37,7 +37,9 @@ OPENAI_API_KEY=sk-your-actual-key-here
 
 ### 3. Start the Application
 
-
+```powershell
+python -m uvicorn app:app --reload --host 0.0.0.0 --port 8000
+```
 
 ### 4. Open Your Browser
 
