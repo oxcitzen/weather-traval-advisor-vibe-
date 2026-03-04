@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌍 Travel Weather Planner</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1>🌍 Travel Weather Planner</h1>
+                <p class="subtitle">AI-powered travel advice based on weather forecasts</p>
+            </div>
+        </header>
+
+        <!-- Main Chat Area -->
+        <div class="chat-container">
+            <div class="chat-messages" id="chatMessages">
+                <!-- Welcome Message -->
+                <div class="message assistant-message">
+                    <div class="message-avatar">🤖</div>
+                    <div class="message-content">
+                        <p>Hi! I'm your travel weather advisor. Ask me about weather conditions for your upcoming trips!</p>
+                        <p class="message-hint">Try: "I'm planning a trip to Tokyo for next month" or "What should I pack for Paris in 2 weeks?"</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tool Call Status -->
+            <div class="tool-status" id="toolStatus" style="display: none;">
+                <div class="tool-indicator">
+                    <div class="spinner"></div>
+                    <span id="toolStatusText">Processing...</span>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="chat-input-container">
+                <form id="chatForm" class="chat-input-form">
+                    <textarea 
+                        id="messageInput" 
+                        class="chat-input" 
+                        placeholder="Ask about weather for your trip..."
+                        rows="1"
+                    ></textarea>
+                    <button type="submit" class="send-button" id="sendButton">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Example Prompts -->
+        <div class="examples">
+            <p class="examples-title">Try these examples:</p>
+            <div class="example-buttons">
+                <button class="example-btn" data-prompt="I'm planning a trip to Tokyo for next month">
+                    🗾 Tokyo next month
+                </button>
+                <button class="example-btn" data-prompt="What's the weather like in Paris in 2 weeks?">
+                    🗼 Paris in 2 weeks
+                </button>
+                <button class="example-btn" data-prompt="Should I bring an umbrella to London next month?">
+                    ☔ London weather
+                </button>
+                <button class="example-btn" data-prompt="I want to visit Bali in 3 months">
+                    🏝️ Bali in 3 months
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
