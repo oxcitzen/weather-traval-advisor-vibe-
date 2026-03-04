@@ -23,11 +23,7 @@ copy .env.example .env
 ## 3️⃣ Start the Server
 
 ```powershell
-# Easy way
-.\start.ps1
-
-# Or manual
-python -m uvicorn app:app --reload
+python -m uvicorn app:app --reload --host 0.0.0.0 --port 8000
 ```
 
 ## 4️⃣ Open Your Browser
