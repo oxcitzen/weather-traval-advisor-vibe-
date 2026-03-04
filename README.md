@@ -37,20 +37,7 @@ OPENAI_API_KEY=sk-your-actual-key-here
 
 ### 3. Start the Application
 
-**Windows PowerShell:**
-```powershell
-.\start.ps1
-```
 
-**Linux/Mac:**
-```bash
-./start.sh
-```
-
-**Or manually:**
-```bash
-python -m uvicorn app:app --reload
-```
 
 ### 4. Open Your Browser
 
